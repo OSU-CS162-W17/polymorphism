@@ -4,6 +4,7 @@
 #include "universityperson.hpp"
 #include "employee.hpp"
 #include "instructor.hpp"
+#include "shape.hpp"
 
 
 Employee* random_employee(int n) {
@@ -45,6 +46,13 @@ int main() {
     << std::endl;
   std::cout << "\ttitle: " << eptr->get_title() << std::endl;
   std::cout << "\tmonthly pay: " << eptr->get_monthly_pay(160) << std::endl;
+  std::cout << std::endl;
+
+  Employee& eref = instructor;
+  std::cout << "eref: " << eref.get_name() << "\t" << eref.get_id()
+    << std::endl;
+  std::cout << "\ttitle: " << eref.get_title() << std::endl;
+  std::cout << "\tmonthly pay: " << eref.get_monthly_pay(160) << std::endl;
   std::cout << std::endl;
 
   Employee* employees[10];
